@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awesome Quiz App</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <!-- Start btn -->
+    <button class="start-btn" id="start">Start Quiz</button>
+
+    <!-- Rules -->
+    <div class="rules hidden">
+        <div class="rules-header">
+            <h2 class="rules-title">Some Rules of this Quiz</h2>
+        </div>
+        <div class="rules-body">
+            <ul class="rules-list">
+                <li class="rules-item">1. You will have only <span>15 seconds</span> per each question.</li>
+                <li class="rules-item">2. Once you select your answer, it can't be undone.</li>
+                <li class="rules-item">3. You can't select any option once time goes off.</li>
+                <li class="rules-item">4. You can't exit from the Quiz while you're playing.</li>
+                <li class="rules-item">5. You'll get points on the basis of your correct answers.</li>
+            </ul>
+        </div>
+        <div class="rules-footer">
+            <button class="btn btn-outline" id="exit">Exit Quiz</button>
+            <button class="btn" id="continue">Continue</button>
+        </div>
+    </div>
+
+    <!-- Quiz_box -->
+    <div class="quiz_box hidden">
+        <div class="quiz_box-header">
+            <h2 class="quiz_box-title">Awesome Quiz Application</h2>
+            <div class="quiz_box-timer">
+                <label id="time-text">Time Left</label>
+                <span class="time" id="time">15</span>
+            </div>
+            <div class="quiz_box-line">
+                <span class="quiz_box-progress" id="time-line"></span>
+            </div>
+        </div>
+        <div class="quiz_box-body"></div>
+        <div class="quiz_box-footer">
+            <div class="question-counter">
+                <span>1</span> of <span>5</span> Questions
+            </div>
+            <button class="btn hidden" id="next">Next Que</button>
+        </div>
+    </div>
+
+    <!-- Result_box -->
+    <div class="result_box hidden">
+        <div class="result_box-icon">
+            <i class="fas fa-crown"></i>
+        </div>
+        <div class="result_box-content">
+            <h3>You've completed the Quiz!</h3>
+            <p class="result_box-text"></p>
+        </div>
+        <div class="result_box-btns">
+            <button class="btn" id="reply">Reply Quiz</button>
+            <button class="btn btn-outline" id="quit">Quit Quiz</button>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="./questions.js"></script>
+    <script src="./index.js"></script>
+</body>
+
+</html>
