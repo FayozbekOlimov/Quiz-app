@@ -175,12 +175,12 @@ function startTimer(count) {
 }
 
 function startTimerLine(count) {
-    counterLine = setInterval(timer, 30);
+    counterLine = setInterval(timer, 15);
 
     function timer() {
-        count++;
-        timeLine.style.width = count + 'px';
-        if (count >= 500) {
+        count += 0.1;
+        timeLine.style.width = count + '%';
+        if (count >= 100) {
             clearInterval(counterLine);
         }
     }
